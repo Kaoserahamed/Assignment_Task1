@@ -32,21 +32,38 @@ screen.
 
 ### Viewport strategy
 
-The entire UI lives in a centred container:
+The entire UI lives in a centred, width-capped container that grows from
+mobile through desktop:
 
 ```tsx
-max-w-[440px]   // ≈ largest mobile phone (iPhone 15 Pro Max)
-overflow-x-clip // belt-and-braces: zero horizontal scroll
-min-h-dvh       // dynamic viewport height (excludes mobile browser chrome)
+max-w-[440px]      // mobile (default): iPhone 15 Pro Max width
+md:max-w-[600px]   // ≥768px: tablet
+lg:max-w-[720px]   // ≥1024px: small desktop
 ```
 
-| Target width | Notes                                                                        |
-| ------------ | ---------------------------------------------------------------------------- |
-| **360 px**   | Tightest supported; single column, `px-4` gutters, all text legible.         |
-| **390 px**   | iPhone 14 / Pixel defaults; cards sit comfortably.                           |
-| **430 px**   | iPhone 15 Pro Max; the max-width stops growth so the layout doesn't stretch. |
+```tsx
+overflow - x - clip; // belt-and-braces: zero horizontal scroll
+min - h - dvh; // dynamic viewport height (excludes mobile browser chrome)
+```
+
+| Breakpoint            | Container max-width  | Horizontal padding | Context                             |
+| --------------------- | -------------------- | ------------------ | ----------------------------------- |
+| **< 640 px (mobile)** | 440 px               | `px-4`             | iPhone SE to iPhone 15 Pro Max      |
+| **640 px (`sm`)**     | 440 px + side border | `px-4`             | Framed as a card on wider viewports |
+| **768 px (`md`)**     | 600 px               | `px-5`             | Tablet portrait                     |
+| **1024 px (`lg`)**    | 720 px               | `px-6`             | Tablet landscape / small desktop    |
+
+On `sm`+ the container gains a subtle side border (`sm:border-x`) to frame the
+content as a card on wider viewports. Bottom sheets (`BottomSheet`) cap at
+`max-w-[440px]` on mobile and expand to `md:max-w-[600px]` on larger screens.
 
 ### Breakpoints
+
+Only Tailwind's default breakpoints are used (`sm` = 640 px, `md` = 768 px,
+`lg` = 1024 px). The layout is **mobile-first** — all rules start at the
+mobile value and are enhanced at larger sizes. No custom breakpoints were
+added. At 360–430 px the container fills the viewport up to its 440 px cap,
+so the primary mobile targets are pixel-accurate.
 
 ---
 
