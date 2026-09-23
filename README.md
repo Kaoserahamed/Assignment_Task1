@@ -40,9 +40,9 @@ Table of contents
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | <img src="docs/screenshots/on-time-360.png" width="360" alt="On-time order tracking screen" /> | <img src="docs/screenshots/delayed-360.png" width="360" alt="Delayed order tracking screen" /> | <img src="docs/screenshots/delivered-not-received-360.png" width="360" alt="Delivered but not received tracking screen" /> |
 
-| Tracking unavailable                                                                                      | Loading             | Error            |
-| --------------------------------------------------------------------------------------------------------- | ------------------- | ---------------- |
-| <img src="docs/screenshots/tracking-unavailable-360.png" width="360" alt="Tracking unavailable screen" /> | _(skeleton loader)_ | _(retry prompt)_ |
+| Tracking unavailable                                                                                      | Loading                                                                                                   | Error                                                                                        |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| <img src="docs/screenshots/tracking-unavailable-360.png" width="360" alt="Tracking unavailable screen" /> | <img src="docs/screenshots/loading-360.png" width="360" alt="Loading state with skeleton placeholders" /> | <img src="docs/screenshots/error-360.png" width="360" alt="Error state with retry prompt" /> |
 
 > Run the local smoke test to capture your own screenshots:
 > `npm run smoke` starts the production build on `http://127.0.0.1:4321`.
