@@ -114,7 +114,7 @@ export function BottomSheet({
         aria-labelledby={titleId}
         aria-describedby={description ? descriptionId : undefined}
         tabIndex={-1}
-        className="relative flex max-h-[88dvh] w-full max-w-[440px] md:max-w-[600px] animate-sheet-in flex-col rounded-t-3xl bg-white shadow-2xl shadow-slate-900/20"
+        className="relative flex max-h-[88dvh] w-full max-w-[440px] animate-sheet-in flex-col rounded-t-3xl bg-white shadow-2xl shadow-slate-900/20"
       >
         <div className="flex justify-center pt-3">
           <span aria-hidden="true" className="h-1 w-10 rounded-full bg-slate-200" />

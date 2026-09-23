@@ -79,23 +79,17 @@ SMOKE_BASE_URL=https://order-tracking-screen-six.vercel.app npm run smoke
 
 ## 3. Responsive testing approach
 
-The layout is verified at the three primary mobile widths **and** at tablet /
-desktop widths by:
+The layout is verified at the three target widths by:
 
 1. **CSS token assertion** — the smoke test confirms `max-width:440px` (the
-   mobile column cap) and `overflow-x:clip` (no horizontal scroll) are present
-   in the compiled stylesheet.
+   column cap) and `overflow-x:clip` (no horizontal scroll) are present in
+   the compiled stylesheet.
 2. **Visual inspection** — screenshots were captured at 360 px (see
    `docs/screenshots/`):
    - `on-time-360.png`
    - `delayed-360.png`
    - `delivered-not-received-360.png`
    - `tracking-unavailable-360.png`
-     and at wider breakpoints to confirm the responsive growth:
-   - **768 px** — container widens to `md:max-w-[600px]`, gutters grow to
-     `px-5`, side border frames the column.
-   - **1024 px** — container widens to `lg:max-w-[720px]`, gutters grow to
-     `px-6`, content centres on the slate background.
 3. **Touch-target audit** — the smoke test asserts `min-height:calc(... * 11)`
    (44 px = `min-h-11`) is in the compiled CSS, covering all buttons and inputs.
 4. **Viewport meta** — `layout.tsx` sets `width=device-width`,
@@ -109,8 +103,6 @@ To manually verify in a browser:
   **iPhone 14 (390 px)**, **iPhone 15 Pro Max (430 px)**.
 - Confirm: no horizontal scroll, cards stack vertically, all text is legible,
   buttons are fully tappable.
-- Then widen the viewport past **768 px** and **1024 px** to confirm the
-  container steps up to 600 px / 720 px with larger gutters and no overflow.
 
 ---
 

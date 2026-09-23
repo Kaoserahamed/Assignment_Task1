@@ -346,9 +346,9 @@ export function OrderTrackingScreen({ orders, views, initialView }: OrderTrackin
   return (
     <>
       <div className="flex min-h-dvh justify-center bg-slate-100">
-        <div className="flex min-h-dvh w-full max-w-[440px] flex-col overflow-x-clip bg-slate-50 md:max-w-[600px] lg:max-w-[720px] sm:border-x sm:border-slate-200">
+        <div className="flex min-h-dvh w-full max-w-[440px] flex-col overflow-x-clip bg-slate-50 sm:border-x sm:border-slate-200">
           <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-            <div className="flex items-center gap-3 px-4 sm:px-5 lg:px-6 py-3">
+            <div className="flex items-center gap-3 px-4 py-3">
               <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white">
                 <Package aria-hidden="true" className="size-5" />
               </span>
@@ -367,7 +367,7 @@ export function OrderTrackingScreen({ orders, views, initialView }: OrderTrackin
             </div>
           </header>
 
-          <main className="flex-1 space-y-3 px-4 sm:px-5 lg:px-6 pt-4 pb-5">{content}</main>
+          <main className="flex-1 space-y-3 px-4 pt-4 pb-5">{content}</main>
 
           <ScenarioSwitcher active={activeKey} onChange={applyView} />
         </div>

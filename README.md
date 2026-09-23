@@ -51,10 +51,9 @@ Table of contents
 
 ## Key features
 
-- **Responsive mobile-first layout** — single-column card stack centered in a
-  `max-w-[440px]` container at 360 px / 390 px / 430 px widths, widening to
-  `md:max-w-[600px]` (tablet) and `lg:max-w-[720px]` (desktop) with progressively
-  larger gutters, and `overflow-x: clip` to guarantee zero horizontal scroll.
+- **Responsive mobile layout** — single-column card stack centered in a `max-w-[440px]`
+  viewport, with `overflow-x: clip` to guarantee zero horizontal scroll at
+  360 px / 390 px / 430 px widths.
 - **Visual delivery timeline** — four stages (Processing → Shipped → Out for
   Delivery → Delivered) with completed, current, upcoming and **exception**
   states, each carrying screen-reader text and an `aria-current` marker.
