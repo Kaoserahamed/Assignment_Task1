@@ -10,7 +10,9 @@ import { fileURLToPath } from 'node:url';
 import process from 'node:process';
 
 const PORT = Number(process.env.SMOKE_PORT ?? 4321);
-const BASE_URL = `http://127.0.0.1:${PORT}`;
+/** Set SMOKE_BASE_URL to test a deployment instead of starting a local server. */
+const EXTERNAL_BASE_URL = process.env.SMOKE_BASE_URL;
+const BASE_URL = EXTERNAL_BASE_URL ?? `http://127.0.0.1:${PORT}`;
 const NEXT_CLI = fileURLToPath(new URL('../node_modules/next/dist/bin/next', import.meta.url));
 
 const PAGE_CHECKS = [
@@ -150,8 +152,10 @@ async function waitForServer(timeoutMs = 60_000) {
 }
 
 async function run() {
-  const server = startServer();
+  const server = EXTERNAL_BASE_URL ? null : startServer();
   const failures = [];
+
+  console.log(`Target: ${BASE_URL}\n`);
 
   try {
     await waitForServer();
@@ -198,7 +202,7 @@ async function run() {
       }
     }
   } finally {
-    stopServer(server);
+    if (server) stopServer(server);
   }
 
   if (failures.length > 0) {
