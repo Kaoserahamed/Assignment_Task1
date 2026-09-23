@@ -261,3 +261,19 @@ See the docs folder for full write-ups:
 - [`docs/DESIGN.md`](docs/DESIGN.md) — colour/status semantics, responsive
   approach, typography, accessibility and per-scenario UX decisions.
 - [`docs/TESTING.md`](docs/TESTING.md) — testing checklist and validation steps.
+
+---
+
+## Development process notes
+
+A record of the AI tools and workflow used to build this project lives in
+[`Prompts.md`](Prompts.md). It documents the technical prompt, the implementation
+steps (including models used), and the final review pass.
+
+---
+
+## License
+
+This project is a demonstration / portfolio piece. All mock data, product names
+and brand imagery are fictional. See [`Prompts.md`](Prompts.md) for the
+development process record.
