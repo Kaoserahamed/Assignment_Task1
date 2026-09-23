@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Placeholder product illustration">
+  <rect width="128" height="128" rx="20" fill="#fffbeb" />
+  <path d="M32 46h44v38a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16z" fill="#fde68a" stroke="#d97706" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M76 56h9a13 13 0 0 1 0 26h-9" fill="none" stroke="#d97706" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M46 34c4-4 4-8 0-12M62 34c4-4 4-8 0-12" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.45" />
+</svg>

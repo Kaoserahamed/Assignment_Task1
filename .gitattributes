@@ -1,0 +1,8 @@
+# Normalise line endings for every text file so Windows checkouts stay identical
+# to the repository content (Prettier is configured with `endOfLine: lf`).
+* text=auto eol=lf
+
+*.ico binary
+*.png binary
+*.jpg binary
+*.webp binary

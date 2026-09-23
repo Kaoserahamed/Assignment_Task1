@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Rovex order tracking">
+  <rect width="32" height="32" rx="8" fill="#4f46e5" />
+  <path d="M16 6.5 25 10.5v11L16 25.5 7 21.5v-11z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" />
+  <path d="M7 10.5 16 14.5l9-4M16 14.5v11" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" />
+</svg>
